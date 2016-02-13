@@ -1,0 +1,1294 @@
+@charset "UTF-8";
+/* =======================================================================
+CSSの名前：article.css
+最終更新日時：2013/7/31
+--------------------------------------------------------------------------
+1.共通設定
+2.コーナー別スタイル設定
+======================================================================= */
+
+/* =================================================================
+   1.共通設定
+   使用ファイル：すべて
+=================================================================*/
+
+/*  contents コンテンツ
+-------------------------------------------------------------*/
+#contents{
+    width: 100%;
+    margin: 0 auto;
+    font: 12px/150% "ＭＳ Ｐゴシック",Osaka,monospace;
+    color: dimGray;
+    /*margin-bottom: 40px;*/
+}
+
+/*  breadcrumbs_list ぱんくず
+-------------------------------------------------------------*/
+#breadcrumbs_list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*  border-top:solid 1px #e8e8e8; */
+}
+
+#breadcrumbs_list > div{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    color : #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+#breadcrumbs_list a {
+    display: inline;
+    margin: 0.2em 0;
+    padding: 0.3em 0.4em;
+    text-decoration: none;
+    font-size: 100%;
+    color: #444444;
+    /* border: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background: -moz-linear-gradient(top, #aaaaaa, #cccccc);
+    background: -webkit-gradient(linear,left top,left bottom,from(#aaaaaa),to(#cccccc));
+    background-color: #cccccc; */
+}
+
+#breadcrumbs_list a:link{
+    color : #444444;
+}
+
+#breadcrumbs_list div.breadcrumbs_text{
+    margin: 0 auto;
+    padding: 0.5em;
+    font-size: 0.8em;
+    color: #666666;
+    /* display: none; */
+
+}
+
+/*   social link ソーシャル系リンク
+-------------------------------------------------------------*/
+#breadcrumbs_list div.social_link{
+    margin: 0;
+    padding: 0.5em 1em;
+    position: static;
+}
+
+div.bg_box {
+    position:relative;
+    width: 100%;
+    height: 3em;
+}
+
+div.social_link div.twitter,
+div.social_link div.fb-like{
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+
+/*   article　全体設定
+-------------------------------------------------------------*/
+#article{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    /*border-left:solid 1px #e8e8e8;
+    border-right:solid 1px #e8e8e8;
+    border-bottom:solid 1px #e8e8e8;*/
+    position:relative;
+}
+
+
+/*   article title  タイトルスタイル
+-------------------------------------------------------------*/
+#title{
+    position:relative;
+}
+
+#title h1{
+    display:block;
+    padding:0;
+}
+
+#title h2 {
+    margin:0;
+}
+
+#title h2 img{
+    width:100%;
+}
+
+/* タイトルバナー内のナビゲーションは開発中につき非表示 */
+
+#title a.prev,
+#title a.next{
+    display: none;
+}
+
+#title h3{
+    margin: 0;
+    padding: 0;
+    font-size: 130%;
+    color: #000000;
+    line-height: 1.5em;
+}
+
+#title p{
+    margin: 0 auto 1em auto;
+    padding: 1em 0;
+    width: 93%;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+#title p .right{
+    display: block;
+    width: 50%;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 10px;
+    float: right;
+    text-decoration: none;
+    font-size:12px;
+    text-align: center;
+    color: #FFF;
+    background: url("../images/item_detail_from_here.jpg") repeat-x;
+}
+
+.w100 {
+    display: block;
+    width: 100%;
+}
+
+.textbox > h3 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.item_name_here {
+    height: 54px;
+    overflow: hidden;
+    padding-top: 5px;
+    color: #0068ff;
+    font-weight: bold;
+}
+.appeal_here {
+    height: 36px;
+    overflow: hidden;
+}
+.appeal_here + p {
+    padding-top: 5px;
+    text-align: right;
+}
+
+.item_list > p:nth-child(1) {
+    width: 94%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 3px solid #2C7BDA;
+    padding-bottom: 2px;
+}
+
+.item_list li dl dd p:nth-last-child(1){
+    text-align: right;
+}
+
+.tag {
+    background: none repeat scroll 0px 0px #999;
+    color: #FFF;
+    display: inline-block;
+    font-size: 9px;
+    padding: 0 3px;
+    vertical-align: middle;
+    margin: 5px 0px;
+    height: 18px;
+    line-height: 19px;
+}
+
+/*   article paragraph　段落
+-------------------------------------------------------------*/
+#article div.paragraph{
+    margin: 0 auto;
+    padding: 0;
+    width: 93%;
+    overflow:hidden;
+}
+
+#article div.paragraph > div.imgbox{
+    margin: 0;
+    padding: 0.3em 0;
+    margin-bottom: 12px;
+    width:100%;
+}
+
+#article div.paragraph > div.textbox{
+    margin: 0;
+    padding: 0.3em 0;
+    width:100%;
+}
+#article div.paragraph > div.textbox p{
+    margin: 0;
+    padding: 0.5em 0 0.7em 0;
+    line-height:1.6em;
+}
+
+#article div h2{
+    margin: 0;
+    padding: 0;
+    font-size:125%;
+    color:#000000;
+    line-height:1.5em;
+}
+
+
+/*   画面の向き：ポートレートを想定
+-------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+
+    /*   article paragraph typeA 　段落A　
+    --------------------------------------------*/
+    #article div.typeA div.imgbox{
+        float:right;
+    }
+
+    #article div.typeA div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeA > div.textbox{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+
+    /*   article paragraph typeB 　段落B
+    ---------------------------------------------*/
+    #article div.typeB div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeB > div.textbox{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+
+    /*   article paragraph typeC 　段落C
+    ---------------------------------------------*/
+    #article div.typeC div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeC > div.textbox{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+
+    /*   article paragraph typeD 　段落D
+    ---------------------------------------------*/
+    #article div.typeD div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeD > div.textbox{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+}
+
+/*   画面の向き：ランドスケープを想定
+-------------------------------------------------------------*/
+
+@media only screen and (min-width: 481px) {
+
+    /*   article paragraph typeA 　段落A
+    ---------------------------------------------*
+    #article div.typeA div.imgbox{
+        float:right;
+        width: 49%;
+    }
+
+    #article div.typeA div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeA > div.textbox{
+        margin: 0;
+        padding: 0.5em;
+        float:right;
+        width:49%;
+    }
+
+
+    /*   article paragraph typeB 　段落B
+    ---------------------------------------------*/
+    #article div.typeB div.imgbox{
+        float:left;
+        width: 49%;
+    }
+
+    #article div.typeB div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+    }
+
+    #article div.typeB > div.textbox{
+        margin: 0;
+        padding: 0.5em;
+        float:left;
+        width:49%;
+    }
+
+
+    /*   article paragraph typeC 　段落C
+    ----------------------------------------------*/
+    #article div.typeC div.imgbox{
+        float:right;
+        width: 49%;
+    }
+
+    #article div.typeC div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height:50%;
+    }
+
+    #article div.typeC > div.textbox{
+        margin: 0;
+        padding: 0.5em;
+        float:left;
+        width:49%;
+    }
+
+
+    /*   article paragraph typeD 　段落D
+    ----------------------------------------------*/
+    #article div.typeD div.imgbox{
+        float: left;
+        width: 49%;
+        height: auto;
+    }
+
+    #article div.typeD div.imgbox > img{
+        margin: 0;
+        padding: 0;
+        width:100%;
+        height:auto;
+    }
+
+    #article div.typeD > div.textbox{
+        margin: 0;
+        padding: 0.5em;
+        float:left;
+        width:49%;
+    }
+
+}
+
+/*   article paragraph typeE 　段落E
+---------------------------------------------*/
+#article div.typeE div.imgbox{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+#article div.typeE div.imgbox > img{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    display:block;
+}
+
+/*   article paragraph typeF　段落F
+---------------------------------------------*/
+#article div.typeF div.textbox{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+/*   article paragraph typeG　段落G
+---------------------------------------------*/
+#article div.typeG div.textbox{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+#article div.typeG div.imgbox{
+    margin: 0;
+    padding: 0;
+    width:100%;
+}
+
+
+/*   article paragraph typeFree　自由段落
+---------------------------------------------*/
+#article div.typeFree div.textbox{
+    margin: 1em auto;
+    padding: 0;
+    width: 93%;
+    overflow:hidden;
+}
+
+
+/*   article item_list
+---------------------------------------------*/
+#article div.item_list{
+    margin: 2em 0;
+    padding: 0;
+    width:100%;
+}
+
+#article div.item_list ul{
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    width: 94%;
+}
+
+#article div.item_list li{
+    float: left;
+    border-right:solid 1px #ffffff;
+    border-bottom:solid 1px #ffffff;
+    overflow: hidden;
+    padding-top: 10px;
+}
+#article div.item_list li:nth-child(2n){
+    float: right;
+}
+
+#article div.item_list dl{
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#article div.item_list dt{
+    margin: 0;
+    padding: 0;
+    float:left;
+}
+
+#article div.item_list dt a{
+    margin: 0;
+    display: block;
+}
+
+#article div.item_list dt img{
+    border: solid 1px #dfdfdf;
+    box-sizing: border-box;
+    width: 100%;
+    vertical-align: top;
+}
+
+#article div.item_list dt .soldout {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: none repeat scroll 0% 0% rgb(113, 113, 114);
+    color: rgb(255, 255, 255);
+    font-size: 9px;
+    padding: 0px 3px;
+    height: 18px;
+    line-height: 19px;
+}
+
+#article div.item_list dd{
+    padding: 0;
+    float:left;
+    width: 100%;
+}
+
+#article div.item_list dd a{
+    text-decoration:none;
+    color:#000000;
+}
+
+#article div.item_list dd a:hover{
+    text-decoration:underline;
+    color:#000000;
+}
+
+#article div.item_list dd span.item_name{
+    line-height:18px;
+}
+
+
+#article div.item_list dd p a{
+    display: block;
+    width: 85%;
+    margin: 0.2em 0;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+    text-align:center;
+    font-size: 120%;
+    color: #333333;
+    border: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    background: -moz-linear-gradient(top, #aaaaaa, #cccccc);
+    background: -webkit-gradient(linear,left top,left bottom,from(#aaaaaa),to(#cccccc));
+    background-color: #cccccc;
+}
+
+#article div.item_list dd p a:hover{
+    text-decoration:none;
+}
+
+#article a.page_top{
+    display: none;
+}
+
+
+/*   article list
+---------------------------------------------*/
+#article_list ul{
+    overflow:hidden;
+    padding:10px 5px 50px 30px;
+}
+
+#article_list ul li{
+    float:left;
+    margin:5px 25px 5px 0;
+}
+
+#article_list ul li img{
+    vertical-align:bottom;
+}
+
+#article_list ul li p{
+    text-align:center;
+    width:450px;
+    padding:5px 0;
+    font-size:15px;
+}
+
+
+/* セレクションページ特殊レイアウト (selection/032.xhtml)　09/26秋山
+========================================================== */
+
+.item_list_title_wrap h3 {
+    font-size: 1.1em !important;
+    background-color: #0273FD;
+    color: #FFFFFF !important;
+    padding: 5px 14px;
+}
+
+.item_list_title_wrap p {
+    padding:  0.5em 0 0.7em;
+    font-size: 15px !important;
+    padding: 5px 14px 0px;
+}
+.item_list_title_wrap2 h3 {
+    font-size: 1.1em !important;
+    border-bottom: 1px solid #2376D6;
+    color: #444444 !important;
+    padding: 5px 14px;
+}
+
+.item_list_title_wrap2 p {
+    padding:  0.5em 0 0.7em;
+    font-size: 15px !important;
+    padding: 5px 14px 0px;
+}
+
+.item_list_title_wrap3{
+    width: 94%;
+    margin: 0px auto;
+}
+.item_list_title_wrap3 h3 {
+    font-size: 1.1em !important;
+    background-color: #FF6666;
+    color: #FFFFFF !important;
+    padding: 5px 14px;
+}
+
+.item_list_title_wrap3 p {
+    padding:  0.5em 0 0.7em;
+    font-size: 12px !important;
+    padding: 5px 14px 5px;
+    background-color: #FF6666;
+    color: #FFFFFF !important;
+}
+.font_large {
+    font-size: 1.4em;
+}
+
+.new_color {
+    color: #ff8c00;
+}
+
+.square_blue {
+    color: #2376D6;
+    font-weight: bold;
+}
+img.italy_icon {
+    max-width: 18px;
+    padding: 0 5px;
+    vertical-align: text-bottom;
+    width: 100%;
+}
+/* =================================================================
+   2.コーナー別スタイル設定
+   使用ファイル：ext/selection配下、ext/talk配下、ext/ artisan配下、
+   ext/pressrelease、ext/faq、ext/faq、ext/fb/free_cpn
+=================================================================*/
+
+
+/*  selection
+-------------------------------------------------------------*/
+/* #breadcrumbs_list div.selection{
+    background-color : #393e4f;
+} */
+
+ul.box_3times2_items p img {
+    width: 100%;
+
+}
+
+ul.box_3times2_items li {
+    width: auto;
+    height: auto;
+    margin: 0.7em;
+    padding: 0.7em;
+    background-color: #EEE;
+}
+
+
+/*   kurashiburi 暮らしぶり
+-------------------------------------------------------------*/
+/* #breadcrumbs_list div.kurashi{
+    background-color:#804246;
+} */
+
+div.item_list h3.kurashi{
+    border-bottom:dotted 1px #804246;
+    color:#804246;
+    padding:5px 0;
+    margin:10px 0;
+    display:block;
+    text-indent:15px;
+}
+
+div#nail img{
+    width: 100%;
+}
+
+
+/*   artisan
+-------------------------------------------------------------*/
+/* #breadcrumbs_list div.artisan{
+    background-color:#5c7291;
+} */
+
+
+/*    talk
+-------------------------------------------------------------*/
+span.name0{
+    font-weight:bold;
+    color: #696969;
+}
+
+span.name1{
+    font-weight:bold;
+    color:#0074ff;
+}
+
+span.name2{
+    font-weight:bold;
+    color:#3a3b69;
+}
+
+span.name3{
+    font-weight:bold;
+    color:#50B200;
+}
+
+div.profile{
+    margin: 1em auto;
+    padding: 0;
+    width: 93%;
+    overflow:hidden;
+}
+
+div.profile .textbox {
+    width: 100%;
+}
+
+div.profile .textbox img {
+    width: 100%;
+}
+
+#breadcrumbs_list div.talk{
+    /* background-color:#987682; */
+}
+div.presentation {
+    width: 100%;
+}
+div#sp_imgbox {
+    width: 100%;
+}
+div#sp_imgbox img {
+    width: 100%;
+}
+
+#article div.item_list li{
+    width: 49%;
+    float: left;
+}
+
+
+#article #recommend_item {
+    background-color: #987682;
+    color: white;
+    margin: 1em auto;
+    padding: 1em;
+    overflow: hidden;
+}
+
+#article #recommend_item img {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+#article #recommend_item h3 {
+    margin: 0;
+    padding: 0.5em 0;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#recommend_item a {
+    font-size: 120%;
+    color: #3A3B69;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+}
+
+
+/*  #recommend_item.purple 紫カラー
+-------------------------------------------------------------*/
+
+#article #recommend_item.purple {
+    background-color: #987682;
+}
+
+
+/*  #recommend_item.dblue 濃い青カラー
+-------------------------------------------------------------*/
+
+#article #recommend_item.dblue {
+    background-color: #343D3C;
+}
+
+#article #recommend_item.dblue a{
+    color: #448CFF;
+}
+
+#article #recommend_item.dblue img{
+    margin-right: 5px;
+}
+
+
+/*  #recommend_item.byellow 山吹色
+-------------------------------------------------------------*/
+
+#article #recommend_item.byellow {
+    background-color: #FFBF55;
+}
+
+#article #recommend_item.byellow a{
+    color: #448CFF;
+}
+
+
+/*  #recommend_item.ayellow 薄い黄色
+-------------------------------------------------------------*/
+
+#article #recommend_item.ayellow {
+    background-color: #FFFFCC;
+    padding: 8px;
+    color: #000000;
+}
+
+#article #recommend_item.ayellow h3 {
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 35px;
+    color: #000000;
+}
+
+
+/*  artisan 03で使用
+-------------------------------------------------------------*/
+div.artisan03_contena {
+    font-size: 100%;
+    line-height: 1.5em;
+    margin: 50px auto 24px;
+    overflow: hidden;
+    padding: 0px 10px 20px;
+}
+
+div.artisan03_contena div.border1 {
+    border: 1px solid #CCCCCC;
+    margin: 0;
+    overflow: hidden;
+    padding: 0.5em;
+}
+
+div.artisan03_contena div.imgbox {
+    float: left;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+div.artisan03_contena div.imgbox img {
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+div.artisan03_contena div.textbox {
+    float: left;
+    font-size: 15px;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+
+ul.artisan03_glass {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+ul.artisan03_glass li {
+    background-color: #EEEEEE;
+    height: auto;
+    margin: 4px;
+    padding: 12px;
+}
+
+ul.artisan03_glass li p {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+ul.artisan03_glass li p img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+ul.artisan03_glass li dl {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul.artisan03_glass li dl dt {
+    font-weight: bold;
+    margin: 0.3em 0 0.5em;
+    padding: 0;
+}
+
+
+ul.artisan03_glass li dl dd {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul.artisan03_profile {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+ul.artisan03_profile li {
+    background-color: #EEEEEE;
+    height: auto;
+    margin: 4px;
+    padding: 12px;
+}
+
+
+ul.artisan03_profile li p {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+
+ul.artisan03_profile li p img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+ul.artisan03_profile li dl {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul.artisan03_profile li dl dt {
+    margin: 0.3em 0 0.5em;
+    padding: 0;
+}
+
+
+ul.artisan03_profile li dl dd {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*     FAQ
+-------------------------------------------------------------*/
+#breadcrumbs_list div.faq {
+    background-color: #0054B6;
+}
+
+
+#article div.FaqContena {
+    width: auto;
+}
+
+
+#article div.FaqContena h3 {
+    margin: 0.2em 0.4em;
+    padding: 0.2em;
+    border-bottom: 1px dashed rgb(0, 116, 255);
+    font-size: 110%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+#article div.FaqContena div {
+    margin: 0.5em 0;
+    padding: 0;
+    border: 1px solid rgb(0, 116, 255);
+}
+
+
+#article div.FaqContena div p {
+    margin: 0.2em 0.4em;
+    padding: 0.2em;
+}
+
+
+#article div.FaqContena div p.caption {
+    font-size: 80%;
+    line-height: 1.5em;
+}
+
+
+#article div.FaqContena div ul {
+    list-style: disc inside;
+    margin: 0.2em 0.4em;
+    padding: 0.2em;
+}
+
+
+#article div.FaqContena div table {
+    margin: 0.2em 0.4em;
+    padding: 0;
+    border: 1px solid #0074FF;
+    font-size: 90%;
+    background-color: #F1F7FF;
+}
+
+
+#article div.FaqContena div table tr{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #0074FF;
+}
+
+
+#article div.FaqContena div table td{
+    margin: 0;
+    padding: 0.1em 0.3em;;
+    border: 1px solid #0074FF;
+}
+
+
+#article div.FaqContena div table th{
+    margin: 0;
+    padding: 0.1em;
+    border: 1px solid #0074FF;
+    text-align: center;
+    font-weight: bold;
+    background-color: #E5F1FF;
+}
+
+
+#article div.FaqContena div div.ContactBy {
+    margin: 0.4em 0.4em;
+    padding: 0;
+    border: 1px solid #0074FF;
+    font-size: 90%;
+    line-height: 1.6em;
+    background-color: #E5F1FF;
+}
+
+
+#article div.FaqContena div div.ContactBy h4 {
+    margin: 0.2em 0.4em;
+    padding: 0 0.2em;
+    border-bottom: 1px dashed #0074FF;
+    font-size: 90%;
+    line-height: 1.6em;
+    color: #000;
+    font-weight: bold;
+}
+
+
+#article div.FaqContena div div.ContactBy strong {
+    font-size: 120%;
+    font-weight: bold;
+    color: #333;
+}
+
+
+a.NotInFaq {
+    font-weight: bold;
+    color: #FF5400;
+}
+
+
+/*   PressRelease  プレスリリース
+-------------------------------------------------------------*/
+#breadcrumbs_list div.pressrelease {
+    background-color: #006666;
+}
+
+#PressReleaseContena {
+    margin: 0;
+    padding: 12px 0 0 0;
+    position: relative;
+}
+#PressReleaseLeft {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    width: 0px;
+    float: left;
+    border-top: 1px dotted #666666;
+}
+#PressReleaseRight {
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 100%;
+    float: right;
+}
+
+.PressReleaseLeftItems {
+    margin: 0;
+    padding: 1em 0;
+    border-bottom: 1px dotted #666666;
+    font-size: 16px;
+
+}
+.PressReleaseLeftItems p{
+    margin: 0 0 0 16px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.PressReleaseRightItems {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px dotted #666666;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+}
+
+.PressReleaseRightItemsPhotos {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    float: left;
+}
+
+.PressReleaseRightItemsContents {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    float: right;
+}
+
+.PressReleaseRightItemsPhotos img{
+    margin: 0;
+    padding: 0 0 12px 6px;
+    width: 80%;
+}
+
+.PressReleaseRightItemsPhotosSP {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+}
+
+img.PressReleaseRightItemsPhotosSP{
+    margin: 1;
+    padding: 0 0 12px 6px;
+    width: 70%;
+}
+
+.PressReleaseRightItemsContentsHead{
+    margin: 0;
+    padding: 0;
+    padding-left: 6px;
+    border-left: 4px solid #006666;
+    border-bottom: 1px solid #006666;
+    font-size: 13px;
+    line-height: 1.6em;
+}
+
+.PressReleaseRightItemsContentsBody{
+    margin: 0;
+    padding: 9px 0 0 3px;
+}
+
+.PressReleaseRightItemsContentsBody strong{
+    font-weight: bold;
+}
+
+li.DownloadItemPDF {
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url("../images/icon_pdf.gif");
+}
+
+li.DownloadItemIMG {
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url("../images/icon_img01.gif");
+}
+
+li.DownloadItemPDF {
+    list-style: inside url("../images/icon_pdf.gif");
+    list-style-type: initial;
+    list-style-position: inside;
+    list-style-image: url(../images/icon_pdf.gif);
+}
+
+
+/* facebook15万いいね！突破記念【期間限定】送料無料キャンペーン用
+------------------------------------------------------------------------*/
+#contents.general #breadcrumbs_list {
+    border: 0px;
+}
+
+#contents.general #article {
+    border: 0px;
+}
+
+#contents.general h2 {
+    min-height: 14px;
+    height: auto !important;
+    margin: 0 6px 6px;
+    padding: 24px 2px 3px 10px;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #000;
+    border-bottom:3px solid #0074FF;
+    font-weight:normal;
+    font-size: 135%;
+}
+
+#contents.general div.paragraph_general {
+    margin: 0 6px 12px;
+    padding: 12px;
+    font-size: 110%;
+}
+
+#contents.general div.paragraph_general p {
+    margin: 0.5em 0 1em;
+}
+
+#contents.general span.att_g {
+    color: red;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 0 0.2em;
+}
+
+#contents.general span.att_underline {
+    text-decoration: underline;
+}
+
+#contents.general #article_list ul li img {
+    width: 100%;
+}
+
+.profileBox {
+    width: 80%;
+    padding: 20px;
+    background-color: #e1edfa;
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.profileBox img {
+    vertical-align: bottom;
+}
+.profileBox .textbox {
+    padding-top:5px!important;
+    padding-bottom:10px!important;
+    padding-right:15px!important;
+    font-size: 15px;
+    line-height: 25px
+}
+.profileBox .textbox h3 {
+    color: #3b83db;
+}
+.profileBox .bgWhite {
+    width: 96%!important;
+    padding: 5px 2%!important;
+    background-color: #FFF;
+}
+.bold {
+    font-weight: bold;
+}
