@@ -78,30 +78,28 @@ gulp.task("server",function(){
 	});
 });
 
-var sass = require("gulp-ruby-sass");
+var rubySass = require("gulp-ruby-sass");
 var sourcemaps = require("gulp-sourcemaps");
 gulp.task('scss',function(){
 	//1.0.0から配列やアスタリスクは使えない
-  return gulp.src('./src/scss/**/*.scss')
+  return rubySass('./src/scss/index.scss',{
+	 style: 'expanded',
+	 sourcemap: true
+ })
 	 	.pipe(plumber())
-		.pipe(sass({
-		 style: 'expanded',
-		 sourcemap: true
-	 }))
-	  .pipe(autoprefixer('last 2 version', 'safari 5', 'ie8', 'ie9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('./dest/'))
 		.pipe(browser.reload({stream:true}))
 		.pipe(notify({ message: 'Styles task complete'}))
 });
-gulp.task('sprite',function(){
-	var spriteData = gulp.src(path[3] + '*')
-	.pipe(spritesmith({
-		imgName: 'sprite.png',
-		cssName: 'sprite.scss'
-	}));
-	spriteData.pipe(gulp.dest(path[5]));
-	spriteData.pipe(gulp.dest(path[2]));
-});
+// gulp.task('sprite',function(){
+// 	var spriteData = gulp.src(path[3] + '*')
+// 	.pipe(spritesmith({
+// 		imgName: 'sprite.png',
+// 		cssName: 'sprite.scss'
+// 	}));
+// 	spriteData.pipe(gulp.dest(path[5]));
+// 	spriteData.pipe(gulp.dest(path[2]));
+// });
 
 var jade = require('gulp-jade');
 gulp.task('jade', function(){
