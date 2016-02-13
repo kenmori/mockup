@@ -1,67 +1,102 @@
 var gulp = require("gulp");
-var connect = require("gulp-connect");
-var path = require("path");
-var sass = require("gulp-sass");
 var gutil = require("gulp-util");
 var ftp = require("gulp-ftp");
-var webpack = require('gulp-webpack');
-var webpackConfig = require('./webpack.config.js');
+var imagemin = require("gulp-imagemin");
+var pngquant = require('imagemin-pngquant');
+var csso = require("gulp-csso");
+var autoprefixer = require('gulp-autoprefixer');
+var path = require("path");
 
-var path = [
-"./html/**/*.html",
-"./css/**/*.css",
-"./scss/**/*.scss"
+path = [
+	"index.html",
+	"./src/css/",
+	"./src/scss/**/*.scss",
+	"./src/img/min/",//path[3]
+	"./src/js/",
+	"./src/img/dest/min/"
 ];
-var target = {
-	local : "./html/*.html",
-	host : "./study/html/"
-};
 
-gulp.task("sass",function(){
-	gulp.src(['./scss/*.scss'])// srcを指定
-	.pipe(sass())              // 指定したファイルをJSにコンパイル
-	.pipe(gulp.dest('./dest')) // dest先に出力する
+var spritesmith = require('gulp.spritesmith');
+// gulp.task('sprite',function(){
+// 	var spriteData = gulp.src(path[3] + '*')
+// 	.pipe(spritesmith({
+// 		imgName: 'sprite.png',
+// 		cssName: 'sprite.scss'
+// 	}));
+// 	spriteData.pipe(gulp.dest(path[5]));
+// 	spriteData.pipe(gulp.dest(path[2]));
+// });
+//
+
+gulp.task('min',function(){
+	gulp.src(path[3] + '*')
+	.pipe(imagemin({
+		progressive:true,
+		svgoPlugins: [{removeViewBox:false}],
+		use:[pngquant()]
+	}))
+	.pipe(gulp.dest('./src/img/min/'));
 });
 
-gulp.task("html",function(){
-	gulp.src('./html/*.html')
-});
-gulp.task("connect", function() {
-	connect.server({
-		livereload: true,
-		port: 8000,
-		root: './'
+
+// var uglify = require("gulp-uglify");
+// gulp.task("jsmin",function(){
+// 	gulp.src(["src/js/**/*.js","src/!js/min/**/*.js"])
+// 	.pipe(uglify())
+// 	.pipe(gulp.dest("./src/js/min"));
+// });
+//
+// var webpack = require('gulp-webpack');
+// var webpackConfig = require('./webpack.config.js');
+// gulp.task('cleanBuild',function(cb){
+// 	var rimraf = require('rimraf');
+// 	rimraf('./build',cb);
+// });
+// gulp.task('copyIndex',['cleanBuil'],function(){
+// return gulp.src('index.html')
+// .pipe(gulp.dest('./build'));
+// });
+// gulp.task('build', ['copyIndex'], function (cb) {
+//   return gulp.src('')
+//   .pipe(webpack(webpackConfig))
+//   .pipe(gulp.dest(''));
+// });
+
+
+var browser = require("browser-sync");
+gulp.task("server",function(){
+	browser({
+		server:{
+			baseDir: "./"
+		}
 	});
 });
 
-gulp.task("watch", function() {
-	gulp.watch(path, ['sass','html','reload']);
+var sass = require("gulp-ruby-sass");
+gulp.task('scss',function(){
+	//1.0.0から配列やアスタリスクは使えない
+  sass('./src/scss/', { style: 'expanded' })
+		.pipe(browser.reload({stream:true}))
+    .pipe(gulp.dest('./dest/'))
 });
-
-gulp.task('cleanBuild',function(cb){
-	var rimraf = require('rimraf');
-	rimraf('./build',cb);
-});
-
-gulp.task('copyIndex',['cleanBuil'],function(){
-return gulp.src('./index.html')
-.pipe(gulp.dest('./build'));
-});
-
-gulp.task('build', ['copyIndex'], function (cb) {
-  return gulp.src('')
-  .pipe(webpack(webpackConfig))
-  .pipe(gulp.dest(''));
-});
-
-gulp.task("reload", function() {
-	gulp.src('./html/*.html')
-	.pipe(connect.reload());
-	gulp.src('./scss/*.html')
-	.pipe(connect.reload());
+gulp.task('sprite',function(){
+	var spriteData = gulp.src(path[3] + '*')
+	.pipe(spritesmith({
+		imgName: 'sprite.png',
+		cssName: 'sprite.scss'
+	}));
+	spriteData.pipe(gulp.dest(path[5]));
+	spriteData.pipe(gulp.dest(path[2]));
 });
 
 
+gulp.task('html',function(){
+	gulp.src(path[0])
+	.pipe(browser.reload({stream:true}))
+})
 
-
-gulp.task("default", ["connect", "watch"]);
+gulp.task("default",['server'], function() {
+	// gulp.watch(["./**/*.html","!html/min/**/*.html"],["html"]);
+	gulp.watch(path[0],["html"]);
+    gulp.watch(path[2],["scss"]);
+});
