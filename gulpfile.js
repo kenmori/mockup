@@ -9,13 +9,16 @@ var path = require("path");
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 
+
 path = [
 	"index.html",
 	"./src/css/",
 	"./src/scss/**/*.scss",
 	"./src/img/min/",//path[3]
 	"./src/js/",
-	"./src/img/dest/min/"
+	"./src/img/dest/min/",
+	"./src/jade/**/*.jade",
+	"./dest/**/*.html"
 ];
 
 var spritesmith = require('gulp.spritesmith');
@@ -69,7 +72,8 @@ var browser = require("browser-sync");
 gulp.task("server",function(){
 	browser({
 		server:{
-			baseDir: "./"
+			baseDir: "./",
+			index: "./index.html"
 		}
 	});
 });
@@ -99,7 +103,14 @@ gulp.task('sprite',function(){
 	spriteData.pipe(gulp.dest(path[2]));
 });
 
-
+var jade = require('gulp-jade');
+gulp.task('jade', function(){
+	return gulp.src(['./src/jade/**/*.jade', '!./src/jade/**/_*.jade'])
+	.pipe(jade({
+		pretty: true
+	}))
+	.pipe(gulp.dest('./'))
+});
 gulp.task('html',function(){
 	gulp.src(path[0])
 	.pipe(browser.reload({stream:true}))
@@ -107,6 +118,7 @@ gulp.task('html',function(){
 
 gulp.task("default",['server'], function() {
 	// gulp.watch(["./**/*.html","!html/min/**/*.html"],["html"]);
+	gulp.watch(path[6],["jade"]);
 	gulp.watch(path[0],["html"]);
-    gulp.watch(path[2],["scss"]);
+  gulp.watch(path[2],["scss"]);
 });
