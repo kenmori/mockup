@@ -1,0 +1,905 @@
+@charset "utf-8";
+/*2016�Ł@���������W�y�[�W���C�A�E�g�i�o�����^�C�����W���p&�z���C�g�f�[���W���p�j*/
+
+/*���{���C�A�E�g*/
+
+#contents.NYS {
+    overflow-x: hidden;
+}
+
+.NYS img {
+    width: 100%;
+}
+
+/*�����������@�o�����^�C���@����������*/
+#valentine .bg_all {
+    background-color: #013a6f;
+    }
+#valentine #contents .bg_deco {
+    background-image: none;
+    background-repeat: repeat;
+    -webkit-background-size: 100px auto;
+    background-size:  100px auto;
+    padding: 0 0 4%;
+}
+
+#valentine .page_header {
+    position: relative;
+}
+#valentine h2.title_bnr {
+    position: relative;
+    z-index: 20;
+}
+
+#valentine .page_header > .title_caption {
+    color: #fff;
+    margin: 0% 0 0;
+    padding: 2% 5% 2% 7%;
+    position: relative;
+    z-index: 21;
+}
+#valentine .item_name {
+    display: block;
+}
+#valentine .item_name > a {
+    color: #013a6f;
+    text-decoration: none;
+}
+.layout_D.contents_wrap.feature .item_price, .price > span:not(.soldout) {
+    color: #649ec6;
+    height: 40px;
+    overflow: hidden;
+}
+/*�g�܊��ɋ����h5�̃V���R��*/
+
+.VD_Chocolatier.contents_wrap {
+    margin: 0 0 4%;
+}
+.VD_Chocolatier .item_wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+    padding: 0 6px 0;
+    width: 100%;
+
+}
+.VD_Chocolatier.contents_wrap .title {
+    color: #735f1b;
+    padding: 0;
+    background: none;
+    margin: 0 0 3%;
+}
+
+#valentine .layout_D.contents_wrap.feature .title {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin: 0 0 3%;
+    padding: 0;
+}
+.VD_Chocolatier > section {
+    margin: 0 0 2%;
+}
+.VD_Chocolatier .item_img_wrap {
+    background-color: #fff;
+    display: table;
+    margin: 0;
+    padding: 0 2%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.VD_Chocolatier .item_img_wrap > a:nth-child(2n+1) {
+    padding: 0 2px 0 0;
+}
+.VD_Chocolatier .item_img_wrap > a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+    padding: 0 0 0 2px;
+}
+
+
+.VD_Chocolatier .item_img_wrap > span.comingsoon(2n+1) {
+    padding: 0 2px 0 0;
+}
+.VD_Chocolatier .item_img_wrap > span.comingsoon {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    padding: 0 0 0 2px;
+    width: 50%;
+}
+.VD_Chocolatier .item_text_wrap {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1% 3% 2%;
+}
+.VD_Chocolatier .item_text_wrap > h4 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.VD_Chocolatier .item_text_wrap .sentence {
+    font-size: 14px;
+    margin-bottom: 2%;
+    color: #4d4229;
+}
+.VD_Chocolatier.contents_wrap .item_wrap {
+    content: "";
+    display: block;
+    width: 98%;
+    border: 7px solid #a4a6a7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 1%;
+    padding: 0%;
+}
+.VD_Chocolatier .item_wrap h4 {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #013a6f;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+    padding: 2% 2% 1%;
+    width: 100%;
+}
+.frame_top {
+    height: 5px;
+    width: 98%;
+    margin: 0 1%;
+}
+
+.frame_bottom {
+    height: 15px;
+    width: 98%;
+    margin: 0 1%;
+}
+.frame_top > img {
+    vertical-align: top;
+    width: 100%;
+    height: 5px;
+}
+.frame_bottom > img {
+    vertical-align: top;
+    width: 100%;
+    height: 15px;
+}
+
+.VD_Chocolatier.contents_wrap .schedule {
+    margin-top: 2%;
+}
+/*.VD_Chocolatier .item_wrap::before {
+    background-image: url("../../images/valentine/2016/parts/contents1_bg_top.png");
+    background-repeat: no-repeat;
+    --webkit-background-size: cover;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 6px;
+    width: 100%;
+}
+.VD_Chocolatier .item_wrap::after {
+    background-image: url("../../images/valentine/2016/parts/contents1_bg_bottom.png");
+    background-repeat: no-repeat;
+    --webkit-background-size: cover;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 6px;
+    width: 100%;
+}*/
+/*�g�܊��ɋ����h5�̃V���R��*/
+#valentine .layout_D.contents_wrap.feature {
+    margin: 0;
+}
+#valentine .layout_D.contents_wrap.feature .title {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding: 0;
+}
+
+#valentine .title > img {
+    vertical-align: middle;
+}
+
+#valentine .photo_wrap {
+    background-color: #fff;
+}
+
+#valentine .text_wrap {
+    background-color: #fff;
+    padding: 0 1%;
+}
+
+
+#valentine .gift_wrap {
+    background-color: #fff;
+}
+
+
+#valentine .gift_wrap h5 {
+    background-color: #a0c3df;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 3% 0;
+    padding: 3% 10px;
+    text-align: center;
+}
+#valentine .layout_D > div.clearfix {
+    margin: 0 1%;
+    width: 99%;
+}
+#valentine .layout_D .item_wrap {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 1% 2% 0;
+    padding: 0 0% 3%;
+    width: 49%;
+}
+
+#valentine .img_wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    padding: 0 10px;
+    width: 100%;
+}
+
+#valentine .img_wrap > a:nth-child(2n) {
+    padding: 0 0 0 5px;
+}
+
+#valentine .img_wrap > a:nth-child(2n+1) {
+    padding: 0 5px 0 0;
+}
+#valentine .img_wrap > a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 50%;
+}
+
+#valentine .gift_wrap .text_wrap > p.gift_info {
+    font-size: 14px;
+    padding: 3% 10px 2%;
+    text-align: left;
+}
+#valentine .layout_D .item_wrap.spacer {
+    background-color: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 1% 2% 0;
+    padding: 0 1%;
+    width: 49%;
+    background-image: url("../../images/valentine/2016/parts/choco_spacer_bg.png");
+    position: relative;
+    background-size: cover;
+    --webkit-background-size: cover;
+}
+#valentine .item_wrap.spacer > div {
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+}
+#valentine .item_wrap.spacer img {
+    vertical-align: bottom;
+    width: 95%;
+}
+
+#valentine .gift_wrap {
+    background-color: #fff;
+    margin: -3% 0 0;
+}
+#valentine .gift_btn {
+    background-color: #a0c3df;
+    background-image: url("../../images/mothersday/2015/nav_arrow.png");
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    background-size: 13px auto;
+    -webkit-background-size: 13px auto;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 10px 3%;
+    padding: 4px 22px 4px 8px;
+    vertical-align: middle;
+}
+#valentine .NYS .mail_fb_wrap li {
+    background: url("../../images/whiteday/2016/parts/arrow_pink.png") no-repeat scroll 98% center / 12px auto rgba(0, 0, 0, 0);
+    border-top: 2px solid #a0c3df;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    height: 70px;
+    width: 100%;
+}
+#valentine .NYS .back_tp {
+    background: #a0c3df none repeat scroll 0 0;
+    text-align: center;
+}
+
+/*�i�r�Q�[�V����*/
+
+#valentine .navigation {
+    margin: 0 0 4%;
+}
+
+#valentine .navigation li {
+    display: table;
+    width: 100%;
+}
+
+#valentine .navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+#valentine .navigation li .photo {
+    display: table-cell;
+    width: 24%;
+}
+
+#valentine .photo > img {
+    vertical-align: middle;
+    width: 100%;
+}
+#valentine .navigation li .words {
+    display: table-cell;
+    width: 56%;
+    background-size: auto 100%;
+    --webkit-background-size: auto 100%;
+    vertical-align: middle;
+}
+
+#valentine .navigation li .words .arrow {
+    background-image: url("../../images/whiteday/2016/nav/arrow.png");
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-size: 8% auto;
+    --webkit-background-size: 8% auto;
+    display: block;
+    padding: 1% 2%;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#valentine .navigation li .words .arrow {
+    background-image: none;
+    padding: 0 1%;
+}
+#valentine .navigation li .arrow2 {
+    background-image: url("../../images/whiteday/2016/nav/arrow2.png");
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    background-size: 8% auto;
+    --webkit-background-size: 8% auto;
+    display: block;
+
+}
+#valentine .navigation li .words.nav1 {
+    background-image: url("../../images/whiteday/2016/nav/bg_nav1.png");
+}
+
+#valentine .navigation li .words .paper2 {
+    background-image: url("../../images/valentine/2016/nav/bg_nav1_paper2.png");
+    display: block;
+    margin: 0;
+    padding: 1%;
+}
+
+#valentine .navigation li .words .paper1 {
+    /*background-image: url("../../images/valentine/2016/nav/bg_nav1_paper1.png");*/
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #410b14;
+    display: block;
+    padding: 1%;
+}
+
+#valentine .navigation li .words.nav2 {
+    background-image: url("../../images/whiteday/2016/nav/bg_nav2.png");
+}
+#valentine .navigation li .words.nav3 {
+    background-image: url("../../images/whiteday/2016/nav/bg_nav3.png");
+}
+#valentine .navigation li .words.nav4 {
+    background-image: url("../../images/whiteday/2016/nav/bg_nav4.png");
+}
+#valentine .navigation li .words.nav5 {
+    background-image: url("../../images/whiteday/2016/nav/bg_nav5.png");
+}
+
+.gotop02 {
+    bottom: 1% !important;
+    display: none;
+    position: fixed;
+    right: 1% !important;
+    width: 60px;
+    z-index: 9999;
+}
+/*�����������@�o�����^�C���@����������*/
+
+/*�w�b�_�[*/
+
+.page_header .title_bnr  img,
+.page_header .band img {
+    display: block;
+}
+
+
+.header_sentence {
+    background-color: #c5010d;
+    color: #fff;
+    line-height: 22px;
+    padding: 2% 4%;
+}
+/*�i�r�Q�[�V����*/
+
+.calendar {
+    background-image: url("../../images/newyearssale/2015/parts/paper.png");
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin: 0 0 2% 1%;
+    /*padding: 1% 1% 0;*/
+    width: 32%;
+}
+
+
+.calendar > a {
+    background-image: url("../../images/newyearssale/2015/parts/band2.png");
+    background-position: center top;
+    background-repeat: repeat-x;
+    -moz-background-size: auto 4%;
+    -webkit-background-size: auto 4%;
+    -o-background-size: auto 4%;
+    background-size: auto 4%;
+    display: block;
+    padding: 8% 0 0;
+}
+
+.calendar .date {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: 2%;
+    text-align: center;
+    width: 100%;
+}
+.calendar .date img {
+    display: inline-block;
+    width: 65%;
+    vertical-align: middle;
+}
+
+.calendar .photo {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 2% 2%;
+}
+.calendar .photo img {
+    display: block;
+}
+
+.navigation.other ul li {
+    background-color: #ad292c;
+    background-image: url("../../images/newyearssale/2015/parts/band3.png"), url("../../images/newyearssale/2015/parts/arrow2.png");
+    background-position: left center, 98% center;
+    background-repeat: repeat-y, no-repeat;
+    background-size: 6px auto, 8px auto;
+    color: #fff;
+    margin: 0 0 1%;
+    /*padding: 1% 8% 1% 6%;*/
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.navigation.other ul li a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 2% 8% 2% 6%;
+}
+
+/*�t�b�^�[�i�r*/
+
+
+/*�R���e���c�@���{*/
+.title_date{
+    background-image: url("../../images/newyearssale/2015/parts/paper.png");
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2% 0 2% 0;
+}
+
+
+.title_date .date {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    padding: 0 0 0 2%;
+    vertical-align: text-top;
+    width: 50%;
+}
+
+.title_date .date > img {
+    vertical-align: middle;
+    width: 50%;
+}
+
+
+.title_date .icon {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table-cell;
+    padding: 0 2% 0 0;
+    text-align: right;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.title_date .icon > img {
+    vertical-align: middle;
+    width: 60%;
+}
+
+.contents_wrap .item_wrap {
+    margin: 0 0 5%;
+}
+
+.contents_wrap .title {
+    background-color: #f2e07e;
+    color: #735f1b;
+    padding: 1% 2%;
+}
+
+.contents_wrap .caption {
+    font-weight: normal;
+    padding: 2% 1% 3%;
+    color: #4d4229;
+}
+.contents_wrap .limited {
+    background-image: url("../../images/newyearssale/2015/parts/limited_bg.png");
+    background-repeat: no-repeat;
+}
+
+.contents_wrap .limited {
+    background-color: #ad292c;
+    background-image: url("../../images/newyearssale/2015/parts/limited_deco.png"), url("../../images/newyearssale/2015/parts/limited_deco.png");
+    background-position: 2% center, 98% center;
+    background-repeat: no-repeat;
+    background-size: 31px auto;
+    -moz-background-size: 31px auto;
+    -webkit-background-size: 31px auto;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.contents_wrap .item_name {
+    color: #013a6f;
+    padding: 0 1% 3%;
+    font-weight: bold;
+}
+
+.item_name > a {
+    color: #ce000d;
+    text-decoration: none;
+}
+
+.contents_wrap .item_price {
+    display: block;
+    height: 22px;
+    padding: 0 1% 4%;
+}
+.contents_wrap .soldout {
+    background: none repeat scroll 0 0 #919090;
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 3px;
+    margin: 0 1% 0 1%;
+    vertical-align: middle;
+}
+
+.contents_wrap .schedule {
+    border: 1px solid #727272;
+    color: #727272;
+    display: block;
+    padding: 0 2%;
+    text-align: center;
+    margin: 0 1%;
+    font-size: 12px;
+}
+/*���C�A�E�gA�@�摜2��������*/
+
+.layout_A .photo {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    padding: 2% 1% 1%;
+    width: 50%;
+}
+
+.text_wrap {
+    padding: 0 1%;
+}
+
+.link_btn > a {
+    background-color: #c4b068;
+    background-image: url("../../images/newyearssale/2015/parts/arrow2.png");
+    background-position: 94% 44%;
+    background-repeat: no-repeat;
+    background-size: 8px auto;
+    -webkit-background-size: 8px auto;
+    -moz-background-size: 8px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    height: 33px;
+    line-height: 33px;
+    padding: 0 16px 0 8px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    overflow: hidden;
+}
+
+.link_btn > .Csoon {
+    background-color: #666;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    height: 33px;
+    line-height: 33px;
+    margin: 3% auto 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 98%;
+}
+
+/*.link_btn > a::after {
+
+    content: "";
+    display: inline-block;
+    font-weight: bold;
+    height: 15px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    vertical-align: middle;
+    width: 10px;
+}*/
+/*���C�A�E�gC�@�摜�E���͉�����*/
+
+.layout_C .text_wrap {
+    float: left;
+    padding: 0 1%;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.layout_C .photo_wrap {
+    float: left;
+    width: 50%;
+    padding: 0 1%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*���C�A�E�gD�@���i2�g������*/
+
+.layout_D .item_wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 1%;
+    width: 50%;
+}
+/* ���C�A�E�g�@�y�[�W2 */
+
+.contents_wrap.layout_D .item_name {
+    height: 58px;
+}
+.page_header > .title_caption {
+    padding: 2% 1%;
+}
+
+.layout_D.contents_wrap.feature > h3 {
+    padding: 2% 1%;
+}
+
+.layout_D.contents_wrap.feature .title {
+    background-image: url("../../images/newyearssale/2015/parts/title_bg.png");
+    background-repeat: repeat;
+    padding: 0;
+}
+.layout_D.contents_wrap.feature .item_price {
+    height: 40px;
+    overflow: hidden;
+}
+.layout_D.contents_wrap.feature .title .icon_fan {
+    background-image: url("../../images/newyearssale/2015/parts/icon/icon_fan.png");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    padding: 3% 16% 3% 1%;
+    display: block;
+    color: #444;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.layout_D.contents_wrap.feature {
+    margin: 0 0 5%;
+}
+.contents_wrap.feature .item_name {
+    height: 58px;
+    overflow: hidden;
+}
+/* ���C�A�E�g�@�y�[�W3 */
+
+.page_header .header_caption {
+    padding: 2% 1%;
+}
+
+.layout_D.contents_wrap.newly .title {
+    padding: 3% 16% 3% 1%;
+    background-image: url("../../images/newyearssale/2015/parts/icon/icon_flower.png");
+    background-position: 99% 50%;
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    background-color: #00aaaa;
+    color: #FFF;
+    font-size: 15px;
+    margin: 0 0 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.contents_wrap.newly .item_name {
+    height: 58px;
+    overflow: hidden;
+}
+/*�{�^�������_���J���[*/
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+1) .link_btn > a{
+    background-color: #75b658
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+2) .link_btn > a{
+    background-color: #00a9ac
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+3) .link_btn > a{
+    background-color: #e86086
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+4) .link_btn > a{
+    background-color: #f5dd00
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+5) .link_btn > a{
+    background-color: #02a3ad
+}
+
+
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+6) .link_btn > a{
+    background-color: #f4c311
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+7) .link_btn > a{
+    background-color: #cb4793
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+8) .link_btn > a{
+    background-color: #00a851
+}
+.layout_D.contents_wrap.newly  .item_wrap:nth-child(10n+9) .link_btn > a{
+    background-color: #f6a403
+}
+.layout_D.contents_wrap.newly .item_wrap:nth-child(10n) .link_btn > a{
+    background-color: #e66085
+}
+/*���[���}�K�W����Facebook*/
+.NYS .mail_fb_wrap li {
+    background: url("../../images/newyearssale/2015/parts/arrow_red.png") no-repeat scroll 98% center / 12px auto rgba(0, 0, 0, 0);
+    border-top: 2px solid #c5010e;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: table;
+    height: 70px;
+    width: 100%;
+}
+.NYS .mail_fb_wrap li:last-child {
+    /*border: medium none;*/
+}
+.NYS .mail_fb_wrap li a {
+    display: block;
+    text-decoration: none;
+}
+.NYS .mail_fb_wrap .img {
+    background: none repeat scroll 0 0 #FFF;
+    box-sizing: border-box;
+    display: table-cell;
+    height: 70px;
+    padding: 7px 5px 2px 4px;
+    text-align: center;
+    vertical-align: middle;
+    width: 70px;
+}
+
+.NYS .mail .img img {
+    width: 90%;
+}
+
+.NYS .mail_fb_wrap .words {
+    color: #696969;
+    display: table-cell;
+    font-size: 12px;
+    padding: 0 4% 0 2%;
+    vertical-align: middle;
+    width: 90%;
+}
+
+
+/*�g�b�v�֖߂�*/
+
+.NYS .back_tp {
+    background: none repeat scroll 0 0 #c5010e;
+    text-align: center;
+}
+.NYS .back_tp > a {
+    display: block;
+    height: 60px;
+    margin: 0 0 30px;
+    padding: 11px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.NYS .back_tp > a > img {
+    display: inline-block;
+    height: 40px;
+    padding: 0 0 5px;
+    width: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
