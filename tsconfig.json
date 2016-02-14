@@ -1,0 +1,10 @@
+{
+  "version": "1.5.3",
+  "compilerOptions": {
+    "target": "es6",
+    "declaration": false,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "noLib": false
+  }
+}
