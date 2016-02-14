@@ -1,5 +1,6 @@
 var gulp = require("gulp");
 var gutil = require("gulp-util");
+var sass = require('gulp-sass');
 var ftp = require("gulp-ftp");
 var imagemin = require("gulp-imagemin");
 var pngquant = require('imagemin-pngquant');
@@ -86,9 +87,12 @@ gulp.task('scss',function(){
 	 style: 'expanded',
 	 sourcemap: true
  })
+		.pipe(sourcemaps.init())
+	 	.pipe(sass())
+	 	.pipe(sourcemaps.write())
 	 	.pipe(plumber())
     .pipe(gulp.dest('./dest/'))
-		.pipe(browser.reload({stream:true}))
+		.pipe(browser.reload({stream:true,open: false}))
 		.pipe(notify({ message: 'Styles task complete'}))
 });
 // gulp.task('sprite',function(){
@@ -111,7 +115,7 @@ gulp.task('jade', function(){
 });
 gulp.task('html',function(){
 	gulp.src(path[0])
-	.pipe(browser.reload({stream:true}))
+	.pipe(browser.reload({stream:true,open: false}))
 })
 
 gulp.task("default",['server'], function() {
