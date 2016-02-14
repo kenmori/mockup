@@ -11,3 +11,15 @@ gulp
 
 see your localUrl
 http://localhost:8000/html/index.html
+
+npm package update
+
+
+```
+npm-check-updates -u
+npm update
+
+```
+[ref](//http://bunlog.d-s-b.jp/2014/07/22/autoupdate-package_json/)
+
+
