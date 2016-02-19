@@ -13,12 +13,12 @@ var notify = require('gulp-notify');
 
 path = [
 	"index.html",
-	"./src/css/",
-	"./src/scss/**/*.scss",
+	"./src/app/css/",
+	"./src/app/**/*.scss",
 	"./src/img/min/",//path[3]
 	"./src/js/",
 	"./src/img/dest/min/",
-	"./src/jade/**/*.jade",
+	"./src/app/**/*.jade",
 	"./dest/**/*.html"
 ];
 
@@ -41,7 +41,7 @@ gulp.task('min',function(){
 		svgoPlugins: [{removeViewBox:false}],
 		use:[pngquant()]
 	}))
-	.pipe(gulp.dest('./src/img/min/'));
+	.pipe(gulp.dest('./src/asset/img/min/'));
 });
 
 
@@ -83,7 +83,7 @@ var rubySass = require("gulp-ruby-sass");
 var sourcemaps = require("gulp-sourcemaps");
 gulp.task('scss',function(){
 	//1.0.0から配列やアスタリスクは使えない
-  return rubySass('./src/scss/index.scss',{
+  return rubySass('./src/app/index.scss',{
 	 style: 'expanded',
 	 sourcemap: true
  })
@@ -107,7 +107,7 @@ gulp.task('scss',function(){
 
 var jade = require('gulp-jade');
 gulp.task('jade', function(){
-	return gulp.src(['./src/jade/**/*.jade', '!./src/jade/**/_*.jade'])
+	return gulp.src(['./src/**/*.jade', '!./src/**/_*.jade'])
 	.pipe(jade({
 		pretty: true
 	}))
