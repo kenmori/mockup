@@ -12,12 +12,12 @@ var notify = require('gulp-notify');
 
 path = [
 	"index.html",
-	"./src/app/css/",
-	"./src/app/**/*.scss",
+	"./src/**/*.css",
+	"./src/**/*.scss",
 	"./src/img/min/",//path[3]
 	"./src/js/",
 	"./src/img/dest/min/",
-	"./src/app/**/*.jade",
+	"./src/**/*.jade",
 	"./dest/**/*.html"
 ];
 
@@ -72,8 +72,7 @@ var browser = require("browser-sync");
 gulp.task("server",function(){
 	browser({
 		server:{
-			baseDir: "./",
-			index: "./index.html"
+			baseDir: "./"
 		}
 	});
 });
@@ -82,7 +81,7 @@ var rubySass = require("gulp-ruby-sass");
 var sourcemaps = require("gulp-sourcemaps");
 gulp.task('scss',function(){
 	//1.0.0から配列やアスタリスクは使えない
-  return rubySass('./src/app/index.scss',{
+  return rubySass(['./src/app/index.scss','./src/static/index.scss'],{
 	 style: 'expanded',
 	 sourcemap: true
  })
@@ -107,7 +106,7 @@ gulp.task('jade', function(){
 	.pipe(jade({
 		pretty: true
 	}))
-	.pipe(gulp.dest('./'))
+	.pipe(gulp.dest('./index.html'))
 });
 gulp.task('html',function(){
 	gulp.src(path[0])
