@@ -6,6 +6,7 @@ var pngquant = require('imagemin-pngquant');
 var csso = require("gulp-csso");
 var autoprefixer = require('gulp-autoprefixer');
 var path = require("path");
+var gulpif = require("gulp-if");
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 
@@ -100,13 +101,14 @@ gulp.task('scss',function(){
 // 	spriteData.pipe(gulp.dest(path[2]));
 // });
 
+
 var jade = require('gulp-jade');
 gulp.task('jade', function(){
-	return gulp.src(['./src/**/*.jade', '!./src/**/_*.jade'])
+	return gulp.src(['./src/static/*.jade', '!./src/**/_*.jade'])
 	.pipe(jade({
 		pretty: true
 	}))
-	.pipe(gulp.dest('./index.html'))
+	.pipe(gulp.dest('./'))
 });
 gulp.task('html',function(){
 	gulp.src(path[0])
