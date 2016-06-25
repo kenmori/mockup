@@ -1,5 +1,182 @@
 body {
   background: #ffc;
   width: 300px;
-  font-size: 50px;
+  font-size: 51px;
 }
+
+
+//interPolation
+$imgPath: '../common/images/';
+
+#main {
+  background: url(#{$imgPath}main.png);
+}
+
+
+//@if
+$generalStyle: true;
+
+@if $generalStyle {
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+}
+
+//@if else
+$getStyle: 0;
+@mixin style {
+  @if $getStyle == 1 {
+    margin: 0 0 30px;
+  }
+  @else if $getStyle == 2 {
+    margin: 0 10px;
+  }
+  @else {
+    margin: 10px;
+  }
+}
+.box {
+  @include style;
+}
+
+//@for from through
+//@for $変数名 from 開始数値 through 終了数値 {}
+//「3回以下」繰り返す
+@for $value from 1 through 3 {
+  .throughSample_#{$value} {
+    margin-bottom: 1px * $value;
+  }
+}
+
+@for $value from 1 through 2 {
+  .mt_#{$value * 10} {
+    margin-top: 10px * $value;
+  }
+  .mb_#{$value * 10} {
+    margin-bottom: 10 * $value;
+  }
+}
+
+//@for from to
+//@for $変数名 form 開始数値 to 終了数値
+//「3回未満」繰り返す
+@for $value from 1 to 3 {
+  .mt_#{$value * 10}{
+    margin-top: $value * 10;
+  }
+}
+
+//@while forでは1ずつ増えながら繰り返し処理ができるがwhileは増やし方、減らし方を変えることができる
+$value: 20;
+@while $value > 0 {
+  .mt_#{$value} {
+    padding-top: $value + px;
+  }
+  .mt_#{$value} {
+    padding-bottom: $value + px;
+  }
+  $value : $value - 10;
+}
+
+
+//@each
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+a {
+  @each $prefix in $prefixList {
+    #{$prefix}transition: all 0.4s linear;
+  }
+}
+
+$nameList: top, about, company, contact;
+@each $name in $nameList {
+  .body-#{$name} {
+    background-image: url(../img/bg_#{$name}.png);
+  }
+}
+
+//roundとfloorとcellの違い
+//normal
+$width: 100%;
+.boxA{
+  width: $width / 6;//16.66667%
+}
+//round
+.boxB {
+  width: round($width / 6);//17% //小数点以下を四捨五入
+}
+//floor
+.boxC {
+  width: floor($width / 6);//16% 小数点以下切り捨て
+}
+//ceill
+.boxD {
+  width: ceil($width / 3);//34% 小数点以下を切り上げ roundだと33%
+}
+
+//rgba() //16進数のRGB値に透明度を指定してRGBA形式に変換する
+.box {
+  backgorund: rgba(#6a5468, 0.3);
+  //color形式でも指定できる
+  background: rgba(black, .15);
+}
+
+//nth()
+$pageList: top, about, company;
+.item {
+  background: url(#{nth($pageList, 2)}.png);
+}
+
+//@function
+@function halfSize($value){
+  @return $value / 2;
+}
+$width: 105px;
+//defalut設定
+@function halfSize2($value:$width){
+  @debug $value; //debug
+  @return round($value / 2);
+}
+.boxA {
+  width: halfSize(100px)
+}
+.childBoxA {
+  width: halfSize2();//defalutが適応
+}
+
+//dataType
+.DataTypes:after {
+  content: quote(type-of(10px));//Number
+}
+
+//default
+%kadomaru {
+  $radius: 5px !default;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+.item {
+  @extend %kadomaru;//同じ変数名radiusは他にないためdefaultの5px
+}
+
+.item2 {
+  $radius: 10px;
+  @extend %kadomaru;
+}
+
+//nullでいらないものは表示させない
+@mixin itemBox($width, $height, $margin:null,$padding:null){
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+}
+.itemA {
+  @include itemBox(100px, null, 10px, 20px);
+}
+
+
