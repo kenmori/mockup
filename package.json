@@ -96,7 +96,7 @@
     "event-stream": "3.3.2",
     "fs": "0.0.2",
     "glob": "7.0.0",
-    "gulp": "3.9.0",
+    "gulp": "3.9.1",
     "gulp-angular-templatecache": "1.8.0",
     "gulp-autoprefixer": "2.3.1",
     "gulp-babel": "6.1.2",

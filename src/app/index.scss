@@ -7,7 +7,6 @@ body {
 
 //interPolation
 $imgPath: '../common/images/';
-
 #main {
   background: url(#{$imgPath}main.png);
 }
@@ -15,7 +14,6 @@ $imgPath: '../common/images/';
 
 //@if
 $generalStyle: true;
-
 @if $generalStyle {
   .fl {
     float: left;
@@ -84,7 +82,6 @@ $value: 20;
 
 //@each
 $prefixList: -webkit-, -moz-, -ms-, -o-, null;
-
 a {
   @each $prefix in $prefixList {
     #{$prefix}transition: all 0.4s linear;
@@ -119,7 +116,7 @@ $width: 100%;
 
 //rgba() //16進数のRGB値に透明度を指定してRGBA形式に変換する
 .box {
-  backgorund: rgba(#6a5468, 0.3);
+  background: rgba(#6a5468, 0.3);
   //color形式でも指定できる
   background: rgba(black, .15);
 }
@@ -134,6 +131,7 @@ $pageList: top, about, company;
 @function halfSize($value){
   @return $value / 2;
 }
+
 $width: 105px;
 //defalut設定
 @function halfSize2($value:$width){
