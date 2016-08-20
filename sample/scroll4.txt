@@ -1,0 +1,3 @@
+Barriers
+So why did I move on from FRP? I spent 4 months with 8 hours a day of coding with FRP. I’m no expert but I hit some limitations that caused me to look to see what else was out there. It might just be that I have just not used FRP “properly” and I would love to understand it better.
+In my app I had streams for network requests that transform server responses to a structure that was more useful for the UI. There were also observers on UI events. FRP has a very unique API that takes a bit to learn, even if you’ve done map/reduces before. The DSL being very unique made it harder to reuse other functions in my code base. I couldn’t reuse code but the Observable and Streams could be pasted around to leverage in other classes.
