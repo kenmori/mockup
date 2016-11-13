@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GPUテスト</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		.container {
+			position: relative;
+			width: 95%;
+			margin: 10px auto;
+			padding: 10px 5px;
+			margin-bottom: 10px;
+			border: 1px solid #ddd;
+		}
+		.container img {
+			float: left;
+			margin-right: 10px;
+		}
+		.container p {
+			margin: 0;
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		.container div {
+			position: relative;
+			text-align: right;
+		}
+		.container button {
+			position: relative;
+			-webkit-appearance: none;
+			margin-top: 10px;
+			font-size: 16px;
+			border: 1px solid #aaa;
+			border-radius: 5px;
+			background-color: #fff;
+		}
+		.container button.anim {
+			-webkit-animation: anim 10s linear;
+		}
+		@-webkit-keyframes anim {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+<section class="container">
+	<img src="//dummyimage.com/44x44">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div>
+		<button>Like</button>
+	</div>
+</section>
+<section class="container">
+	<img src="//dummyimage.com/44x44">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div>
+		<button>Like</button>
+	</div>
+</section>
+<section class="container">
+	<img src="//dummyimage.com/44x44">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div>
+		<button>Like</button>
+	</div>
+</section>
+<section class="container">
+	<img src="//dummyimage.com/44x44">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div>
+		<button>Like</button>
+	</div>
+</section>
+<section class="container">
+	<img src="//dummyimage.com/44x44">
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div>
+		<button>Like</button>
+	</div>
+</section>
+<script>
+	(function ($, doc) {
+		$(doc).on('click', 'button', function () {
+			$(this).addClass('anim');
+		});
+		$(doc).on('webkitAnimationEnd', 'button', function () {
+			$(this).removeClass('anim');
+		});
+	})(jQuery, document);
+</script>
+
+</body>
+</html>

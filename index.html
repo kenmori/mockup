@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./dest/index.css">
+    <meta charset="UTF-8" />
     <title>Hello, Jade!</title>
   </head>
   <body>
-    <h1>Hello, ee!</h1>
+    <h1>Hello, ee!ふぁふぁ</h1>
+    <!--enctypeは送信時のMIMEタイプを指定できる-->
+    <h2>デコード</h2>
+    <textarea type="text" id="textarea">
+
+    </textarea>
+    <button onclick="check(event)"></button>
+    <div id="result"></div>
+    <script>
+      var text = document.getElementById('textarea');
+      function check(event){
+        if(text.value) {
+          var result = document.getElementById('result');
+          result.innerHTML = decodeURI(text.value);
+        }
+      }
+    </script>
+    <form action="POST" action="" enctype="application/x-www-form-urlencoded"></form>
+    <script>
+      //9+
+      var request = new XMLHttpRequest();
+      request.open('GET', 'http://localhost:3000/posts', true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          var data = JSON.parse(request.responseText);
+        } else {
+          console.log("error");
+        }
+      };
+      request.onerror = function () {
+        console.log("error")
+      };
+      request.send();
+
+//POST
+      var data = { foo: 'abc', bar: 100 }
+      function EncodeHTMLForm(data){
+        var params = [];
+        for(var name in data){
+          var value = data[ name ];
+          var param = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+          params.push(param);
+        }
+        return params.join('&').replace(/%20/g, '+');
+      }
+
+      var request = new XMLHttpRequest();
+      request.open('POST', 'http://localhost:3000/posts', true);
+      // サーバに対して解析方法を指定する
+      //setRequestHeaderは必ずOpen後に呼ぶ必要がある。
+      //第二引数に合わせて送るデータをencodeする必要が有る。
+      //304 前に渡したやつと一緒だよ。ブラウザキャッシュと使って表示させている
+      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+      request.send(EncodeHTMLForm(data));
+
+
+      var promise = function(url) {
+        return new Promise(function (resolve, reject) {
+          var req = new XMLHttpRequest();
+          req.open('GET', url);//req.openおさらい
+          req.onload = function () {
+            if (req.status == 200) {
+              resolve(req.response);
+            } else {
+              reject(Error(req.statusText));
+            }
+          };
+          req.onerror = function () {
+            reject(Error("Nettwork Error"))
+          };
+          req.send();
+        });
+      }
+      promise('http://localhost:3000/comments').then(function(result){
+        console.log(result);
+      })
+    </script>
   </body>
 </html>
