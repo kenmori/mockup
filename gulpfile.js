@@ -75,7 +75,11 @@ gulp.task("server",function(){
 	browser({
 		server:{
 			baseDir: "./"
-		}
+		},
+		url: {
+			port: 3001
+		},
+		port: 8080
 	});
 });
 
