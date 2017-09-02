@@ -1,7 +1,14 @@
 node_modules/
-dest/
-.sass-cache/
-bower_components/
-npm-debug.log
-typings/
-*.html
+survey_builder/
+ab/
+json_au/
+./suma/
+**/*.swp
+**/.module-cache/
+sprite.scssc
+*/.idea/workspace.xml
+.textClipping
+# コメントになる
+*/.DS_Store
+.idea/
+.idea/workspace.xml
