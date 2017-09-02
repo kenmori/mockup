@@ -64,7 +64,8 @@
     "react-tools": "^0.13.3",
     "request": "^2.40.0",
     "rewireify": "0.2.5",
-    "rimraf": "^2.2.8"
+    "rimraf": "^2.2.8",
+    "tslint": "^3.15.1"
   },
   "scripts": {
     "build": "browserify -t reactify client/client.js > public/build/bundle.js --debug",
